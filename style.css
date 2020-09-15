@@ -1,0 +1,93 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-image: url(brige.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: arial, helvetica, sans-serif;
+  font-size: 16px;
+}
+#container{
+  margin: 0 10%;
+  background: rgba(230, 236, 244,0.7);
+}
+.wrap{
+  margin: auto;
+  max-width: 800px;
+  width: 90%;
+}
+.main{
+  background: #417991;
+  border-top: 20px solid #8AB3BA;
+  color: #fff;
+  padding: 45px 0;
+  width: 100%;
+}
+.main .form{
+  color: #212121;
+  text-align: center;
+}
+.main .form input[type="text"]{
+  margin-bottom: 20px;
+  padding: 10px;
+  width: 100%;
+}
+input:focus, input.form-control:focus { /*Para quitar border del focus*/
+
+  outline:none !important;
+  outline-width: 0 !important;
+  box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+}
+.main .form input[type="text"].error{
+  border: 3px solid #D32F2F;
+}
+.main .form .button{
+  background: none;
+  border: 1px solid #8AB3BA;
+  color: #fff;
+  display: inline-block;
+  font-size: 16px;
+  padding: 15px;
+}
+.main .form .button:hover{
+  border: 1px solid #fff;
+  cursor: pointer;
+}
+h1{
+  text-align: center;
+}
+.color{
+  color: #BBD9DE;
+}
+
+/* - Tasks -*/
+.tasks .list{
+  list-style:decimal;
+}
+.tasks .list li{
+  border-bottom: 1px solid #417991;
+}
+.tasks .list li a{
+  color: #212121;
+  display: block;
+  padding: 20px 0;
+  text-decoration: none;
+}
+.tasks .list li a:hover{
+  text-decoration: line-through;
+}
+@media only screen and (max-width: 600px) {
+  body{
+    background-image: none;
+  }
+  #container{
+    margin: 0;
+  }
+}
