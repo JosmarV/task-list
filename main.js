@@ -34,6 +34,7 @@
 
   var deleteTask = function () {
     this.parentNode.removeChild(this);
+    getTask();
   };
 
   //Events
@@ -63,6 +64,6 @@
         list.appendChild(newTask); //Agregando lista la lista ordenada 
       }
     }
-    
+
     getTask();
 }())
