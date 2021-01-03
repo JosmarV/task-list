@@ -32,12 +32,13 @@
     taskInput.setAttribute("placeholder","Write a task");
   };
 
-  var deleteTask = function () {
+  function deleteTask (task) {
     let tasks = JSON.parse(localStorage.getItem('tasks'));
-    this.parentNode.removeChild(this);
-    console.log(tasks[i]);
-    if(tasks[i] == list.chidren[i]) {
-      tasks.splice(i, 1);
+
+    for(let i = 0; i < tasks.length; i++) {
+      if(tasks[i] == task) {
+        tasks.splice(i, 1);
+      }
     }
     localStorage.setItem('tasks', JSON.stringify(tasks));
     getTask();
@@ -68,10 +69,10 @@
 
          //Delete task
         for (let i = 0; i <= list.children.length -1; i++) {
-          list.children[i].addEventListener("click", deleteTask);
+          let task = tasks[i];
+          list.children[i].addEventListener("click", function(){deleteTask (task)});
         } 
       }
     }
-
     getTask();
 }())
